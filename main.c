@@ -5,12 +5,15 @@
 
 int main(int argc, char *argv[]) {
 	int count;
-	int i,j;
-	char s[1000],*p;  
+	int i,j,k;
+	char s[1000],s1[1000],*p;  
     int words=0;
-
+	int commands=0;
     printf("Enter  the string : ");
-    gets(s);
+    fgets(s, sizeof(s), stdin);
+    strcpy(s1, s);
+    char cizgi= '|';
+    
     p=s;
  	while(*p){
     	if(*p++==32)
@@ -33,10 +36,13 @@ int main(int argc, char *argv[]) {
 //   for( j =0 ; j < words; j++){
 //   	printf("%s\n",array[j]);
 //   }
-
-if()
+	printf("%s\n",s1);
+	for (k = 0; s1[k] != '\0'; k++) {
+        if (cizgi == s1[k])
+            commands++;
+    }
    
-   
+//  printf("%d", commands);
 
 	return 0;
 }
