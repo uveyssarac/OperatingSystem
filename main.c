@@ -5,34 +5,38 @@
 
 int main(int argc, char *argv[]) {
 	int count;
-	int i;
-	char string[]= "tekrar fatih 33 ";
-	
+	int i,j;
 	char s[1000],*p;  
     int words=0;
- 
+
     printf("Enter  the string : ");
     gets(s);
- 
-    
     p=s;
- 
- 	while(*p)  
-    {
+ 	while(*p){
     	if(*p++==32)
            words++;
 	} 
   
-    if(strlen(s)>0)
-    words++;
-    printf("no of words in string = %d\n",words);
+    if(strlen(s)>0){
+		words++;
+	}
+    char array[words][20];
     
-	char * token = strtok(string, " ");
+	char * token = strtok(s, " ");
 	while( token != NULL ) {
       printf( "%s\n", token ); //printing each token
+      strcpy(array[count], token);
       token = strtok(NULL, " ");
+	  count++;
       
    }
-	printf("%d",words);
+//   for( j =0 ; j < words; j++){
+//   	printf("%s\n",array[j]);
+//   }
+
+if()
+   
+   
+
 	return 0;
 }
