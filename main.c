@@ -41,18 +41,27 @@ int main(int argc, char *argv[]) {
         if (cizgi == s1[k])
             commands++;
     }
-   
-//  printf("%d", commands);
-	if(commands >= 1){
-		char cArray[commands][50];
+   commands++;
+ // printf("%d", commands);
+ 	char cArray[commands][50];
+	if(commands >= 1){	
 		char * token1 = strtok(s1, "|");
 		while( token1 != NULL ) {
       		printf("%s\n", token1 ); //printing each token
-      		strcpy(cArray[count], token1);
+      		strcpy(cArray[count1], token1);
       		token1 = strtok(NULL, "|");
 	  		count1++;
 		}
-		
+	 
 	}
+//	for( j =0 ; j < commands; j++){
+//   		printf("%s\n",cArray[j]);
+//   }
+	for (i = 0; i<commands; i++){
+	//	if()
+	}
+//	if(char[0]==tekrar){
+//		printf("tekrar konmutu geldi")
+//	}
 	return 0;
 }
