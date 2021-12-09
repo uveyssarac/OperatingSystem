@@ -57,22 +57,30 @@ int main(int argc, char *argv[]) {
 //	for( j =0 ; j < commands; j++){
 //   		printf("%s\n",cArray[j]);
 //   }
-	char word1[20]="";
-	char word2[20]="";
-	char word3[20]="";
-	char word4[20]="";
+	char tempWords1[3][10];
+	char tempWords2[4][10];
+	
 	for (i = 0; i<commands; i++){
-	int kSayi=0;
-	char * token2 = strtok(cArray[i]," ");
+		int kSayi=0;
+		int count2=0;
+		char * token2 = strtok(cArray[i]," ");
+		
 		while( token2 != NULL ) {
-      		printf( "%s\n", token2 ); //printing each token
-
-      		token2 = strtok(NULL, " ");
+			token2 = strtok(NULL, " ");
 	  		kSayi++;
 		}
+		
 		printf( "%d\n", kSayi );
 		if(kSayi==3){
-			
+			while( token2 != NULL ) {
+			token2 = strtok(NULL, " ");	
+			strcpy(tempWords[count2], token2);
+			count2++;
+			for( j =0 ; j < 4; j++){
+   			printf("%s\n",tempWords[j]);
+   			}
+		}
+		count2=0;
 		}
 	}
 //	if(char[0]==tekrar){
