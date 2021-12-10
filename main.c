@@ -42,21 +42,28 @@ int main(int argc, char *argv[]) {
             commands++;
     }
    commands++;
- // printf("%d", commands);
+  printf("Komut Sayisi=%d\n", commands);
  	char cArray[commands][50];
 	if(commands >= 1){	
 		char * token1 = strtok(s1, "|");
 		while( token1 != NULL ) {
-      		printf("%s\n", token1 ); //printing each token
+
       		strcpy(cArray[count1], token1);
       		token1 = strtok(NULL, "|");
 	  		count1++;
 		}
 	 
 	}
-//	for( j =0 ; j < commands; j++){
-//   		printf("%s\n",cArray[j]);
-//   }
+	char cArray2[commands][50];
+	for( j =0 ; j < commands; j++){
+   		printf("cArray[%d]=%s\n",j,cArray[j]);
+   }
+   	for( i =0 ; i < commands; i++){
+   		strcpy(cArray2[i], cArray[i]);
+   }
+   	for( j =0 ; j < commands; j++){
+   		printf("cArray2[%d]=%s\n",j,cArray2[j]);
+   }
 	char tempWords1[3][10];
 	char tempWords2[4][10];
 	
@@ -69,16 +76,17 @@ int main(int argc, char *argv[]) {
 			token2 = strtok(NULL, " ");
 	  		kSayi++;
 		}
+		for( j =0 ; j < commands; j++){
+   		printf("cArray[%d]=%s\n",j,cArray2[j]);
+   	}
+		printf( "cArray1[%d] kelime sayisi = %d\n", i,kSayi );
 		
-		printf( "%d\n", kSayi );
+		char * token3 = strtok(cArray2[i]," ");
 		if(kSayi==3){
-			while( token2 != NULL ) {
+			while( token3 != NULL ) {
 			token2 = strtok(NULL, " ");	
-			strcpy(tempWords[count2], token2);
-			count2++;
-			for( j =0 ; j < 4; j++){
-   			printf("%s\n",tempWords[j]);
-   			}
+			strcpy(tempWords1[count2], token3);
+			count2++;	
 		}
 		count2=0;
 		}
@@ -86,5 +94,6 @@ int main(int argc, char *argv[]) {
 //	if(char[0]==tekrar){
 //		printf("tekrar konmutu geldi")
 //	}
+	printf("----------SON-----------");
 	return 0;
 }
