@@ -76,24 +76,29 @@ int main(int argc, char *argv[]) {
    	for( j =0 ; j < commands; j++){				//cArray2 yazdýrma
    		printf("cArray2[%d]=%s\n",j,cArray2[j]);
    }
-	char tempWords1[3][10];						// 3 ve 4'lü komutlar için geçici arrayler
-	char tempWords2[4][10];						//
-//		int kSayi=0;
-//		int count2=0;
+
+	char tempWords[4][10];						// komutlarýn kelimeleri için array
 	
 	char * token2 = strtok(cArray1[i]," ");
-	for (i = 0; i<1; i++){
+	for (i = 0; i<commands; i++){				//1-Komut sayýsý kadar döner
 		wordsNumber=0;
-		token2 = strtok(cArray1[i]," ");
-		while( token2 != NULL ) {
+		token2 = strtok(cArray1[i]," ");		//cArray1[] patates !!!!!!!!
+		while( token2 != NULL ) {					//2-komutlarýn kelimelerini baþka bir array'e ekler
+			strcpy(tempWords[wordsNumber], token2);
 			token2 = strtok(NULL, " ");
-			strcpy(tempWords1[wordsNumber], token2);
 	  		wordsNumber++;
 		}
-	printf( "cArray1[%d] kelime sayisi = %d\n", i,wordsNumber );
-	   	for( j =0 ; j < 4; j++){				//cArray2 yazdýrma
-   		printf("tempWords1[%d]=%s\n",j,tempWords1[j]);
-   }
+		printf( "cArray1[%d] kelime sayisi = %d\n", i,wordsNumber );	//kelime sayýsý yazdýrma
+	   	for( j =0 ; j < 4; j++){										//tempWords yazdýrma
+   		printf("tempWords[%d]=%s\n",j,tempWords[j]);
+   		}
+   		if(wordsNumber==3 && strcmp(tempWords[0],"tekrar")==0){
+   			printf("tekrar komutu geldi\n");	
+		}else if(wordsNumber==4 && strcmp(tempWords[0],"islem")==0){
+			printf("islem komutu geldi\n");
+		}else{
+			printf("Hatali komut\n");
+		}
 //		char * token3 = strtok(cArray2[i]," ");
 //		if(kSayi==3){
 //			while( token3 != NULL ) {
@@ -104,9 +109,6 @@ int main(int argc, char *argv[]) {
 //		count2=0;
 //		}
 	}
-//	if(char[0]==tekrar){
-//		printf("tekrar konmutu geldi")
-//	}
 	printf("----------SON-----------");
 	return 0;
 }
