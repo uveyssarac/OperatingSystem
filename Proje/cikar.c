@@ -14,6 +14,6 @@ int main(int argc, char *argv[]) {
 	sayi2=atoi(newargv[1]);
 	int sonuc=sayi1-sayi2;
 	printf("%d\n",sonuc);
-	
+
 	return 0;
 }

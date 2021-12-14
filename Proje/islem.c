@@ -31,7 +31,8 @@ char *newargv[4];
    			wait();
    		}    	
    	}else{
-   	printf("Hatali komut");
+   	printf("Hatali komut\n");
+   	printf("\n");
    	}
 
 	return 0;
