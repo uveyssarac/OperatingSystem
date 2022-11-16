@@ -1,4 +1,4 @@
-# **OperatingSystem**
+# **My Bash**
 
 ## **- Proje Konusu**
 ####  Projede kendmize ait bir linux shell programı yazılmıştır.
@@ -19,3 +19,9 @@
 #### 7. Adım – Bu dosyaları çalıştırmak için gerekli fork() ve exec() fonksiyonları kullanarak geliştrildi.
 #### 8. Adım – Son olarak küçük bazı hatalar giderildi ve tasarımlar yapıldı.
 #### 9. Adım – Makefile dosyası oluşturuldu.
+
+## Kullanılan fonksiyonlar ve Kütüphaneler
+#### #include<stdio.h>
+#### #include<stdlib.h>
+#### #include<string.h>
+#### fgets(), strcmp(), strcpy(), strok(), fork(), execve(), wait()
