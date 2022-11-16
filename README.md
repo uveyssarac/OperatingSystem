@@ -25,3 +25,10 @@
 #### #include<stdlib.h>
 #### #include<string.h>
 #### fgets(), strcmp(), strcpy(), strok(), fork(), execve(), wait()
+
+
+![alt text](https://github.com/uveyssarac/OperatingSystem-MyBash/blob/main/Proje/ss1.PNG)
+
+![alt text](https://github.com/uveyssarac/OperatingSystem-MyBash/blob/main/Proje/ss2.PNG)
+
+![alt text](https://github.com/uveyssarac/OperatingSystem-MyBash/blob/main/Proje/ss3.PNG)
