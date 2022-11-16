@@ -1,4 +1,23 @@
 # **My Bash**
+## **- Proje**
+#### Shell komut satırı “myshell>>” olarak görülmektedir.
+#### “exit” komutu girilene kadar çıkış olamaz. Her seferinde “myshell>>” olarak yeni komut satırına izin verir.
+#### Eğer shellde olmayan bir komut, hatalı bir komut girilmişse(parametre hatası) ya da çağırılan programlarda bir hata olduğunda “yanlis bir komut girdiniz” der ve myshell tekrar komut alabilir hale gelir.
+
+#### “tekrar” olarak bir adet program yazılmış bu myshellden bir adet string ve bir adet pozitif rakam parametresi alır. Verilen rakam kadar verilen string'i tekrar eder.  
+      myshell>> tekrar fatih 3
+      fatih
+      fatih 
+      fatih
+#### “islem” “topla” ve “cikar” olarak üç adet program yazılmıştır. Bu programlardan “islem” diğer iki programı çağırır. “islem” myshell’den 3 parametre alarak çalışır ve çıktıları myshell yazarr. “islem” programı gelen parametreye göre process “topla” veya “cikar” programlarını yükler.
+      myshell>> islem cikar 4 2
+      4 - 2 = 2
+#### Komutlar arasına “ | ” işareti kullanılarak komutlar sırayla işlenir.
+      myshell>> tekrar sultan 2 | islem topla 4 5”
+#### “clear” ekran temizler. 
+#### “ls” klasör içesindeki dosyaları gösterir.
+
+
 
 ## **- Proje Konusu**
 ####  Projede kendmize ait bir linux shell programı yazılmıştır.
