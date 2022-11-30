@@ -20,8 +20,8 @@
 
 
 ## **- Proje Konusu**
-####  Projede kendmize ait bir linux shell programı yazılmıştır.
-####  Proje kapsamında kendmize özgü topla , çıkar ve tekrar komutları C dilinde yazılmıştır. 
+####  Projede kendimize ait bir linux shell programı yazılmıştır.
+####  Proje kapsamında kendimize özgü topla , çıkar ve tekrar komutları C dilinde yazılmıştır. 
 ####  Bu komutların dışında halihazırda var olan exit, clear, ls ve cat “myshell” imize eklenmiş ve bunlarda kullanılabilmektedir. 
 ####  Ayrıca oluşturulan bash komutu kullanıldığında terminaldeki “bash ” yerine kendi myshell kabuğumuz çalışmaktadır.
 ####  Bu dosyalar “makefile” dosyasında derlenmiştir. 
